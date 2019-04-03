@@ -130,7 +130,7 @@
       </div>
     </header>
     <div id="all">   
-      <div id="content">
+      <div id="content" style="margin-bottom: 73px">
         
         @yield('conteudo') 
         

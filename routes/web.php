@@ -11,14 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('site.index');
-});
-
 Route::resource('categorias', 'admin\CategoriaController');
 Route::resource('subcategorias', 'admin\SubcategoriaController');
 Route::resource('produtos', 'admin\ProdutoController');
-Route::resource('principal', 'site\PrincipalController');
+Route::resource('/', 'site\PrincipalController');
 
 Auth::routes();
 

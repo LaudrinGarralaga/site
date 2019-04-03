@@ -5,8 +5,6 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
-use App\Repositories\ImageRepository;
-use App\Http\Controllers\Admin\Product;
 use App\Categoria;
 use App\Produto;
 use App\Subcategoria;
@@ -22,7 +20,7 @@ class ProdutoController extends Controller
         // Recupera todas as categorias do banco
         $produtos = Produto::All();
 
-        return view('admin.product.product_list', compact('produtos'));
+        return view('admin.produto.produto_list', compact('produtos'));
     }
 
     
@@ -36,7 +34,7 @@ class ProdutoController extends Controller
         $categorias = Categoria::orderBy('nome')->get();
         $subcategorias = Subcategoria::orderBy('nome')->get();
        
-        return view('admin.product.product_form', compact('categorias', 'subcategorias'));
+        return view('admin.produto.produto_form', compact('categorias', 'subcategorias'));
     }
 
     
@@ -92,7 +90,7 @@ class ProdutoController extends Controller
         // Posiciona no registo a ser alterado
         $reg = Produto::find($id);
 
-        return view('admin.product.product_form_edit', compact('reg','categorias', 'subcategorias'));
+        return view('admin.produto.produto_form_edit', compact('reg','categorias', 'subcategorias'));
     }
 
     
