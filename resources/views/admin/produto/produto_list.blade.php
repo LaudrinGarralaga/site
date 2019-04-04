@@ -57,6 +57,9 @@
                 </tbody>
             </table>
         </div>
+        <a href="{{route('produtos.create')}}" class="btn btn-primary btn-icon-split">
+            <span class="icon text-white-50"><i class="fas fa-plus"></i></span><span class="text">Novo produto</span>
+        </a>
     </div>
 </div>  
 @endsection

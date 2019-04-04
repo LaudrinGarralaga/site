@@ -48,6 +48,7 @@ class ProdutoController extends Controller
         $produto->val_avista = $request->input('val_avista');
         $produto->val_parcelado = $request->input('val_parcelado');
         $produto->num_parcela = $request->input('num_parcela');
+        $produto->descricao = $request->input('descricao');
         $produto->categoria_id = $request->input('categoria_id');
         $produto->subcategoria_id = $request->input('subcategoria_id');
 
@@ -103,6 +104,7 @@ class ProdutoController extends Controller
         $reg->val_avista = $request->input('val_avista');
         $reg->val_parcelado = $request->input('val_parcelado');
         $reg->num_parcela = $request->input('num_parcela');
+        $reg->descricao = $request->input('descricao');
         $reg->categoria_id = $request->input('categoria_id');
         $reg->subcategoria_id = $request->input('subcategoria_id');
 

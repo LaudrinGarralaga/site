@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Produto extends Model
 {
-    protected $fillable = array('nome', 'val_avista', 'val_parcelado', 'num_parcela', 'image', 'categoria_id', 'subcategoria_id');
+    protected $fillable = array('nome', 'val_avista', 'val_parcelado', 'num_parcela', 'descricao', 'image', 'categoria_id', 'subcategoria_id');
     public $timestamps = false;
 
     public function Categoria()

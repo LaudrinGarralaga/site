@@ -9,7 +9,7 @@
           <div class="col-lg-12">
             <div class="p-5">
               <div class="text-center">
-                <h5 class="m-0 font-weight-bold text-primary">Cadastro de categoria</h5>&nbsp;
+                <h5 class="m-0 font-weight-bold text-primary">Aleração de categoria</h5>&nbsp;
               </div>
               <form class="user" method="post" action="{{route('categorias.update', $reg->id)}}">
                     {{ method_field('put') }}

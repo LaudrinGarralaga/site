@@ -9,7 +9,7 @@
               <div class="col-lg-12">
                 <div class="p-5">
                   <div class="text-center">
-                    <h5 class="m-0 font-weight-bold text-primary">Cadastro de sub-categoria</h5>&nbsp;
+                    <h5 class="m-0 font-weight-bold text-primary">Alteração de sub-categoria</h5>&nbsp;
                   </div>
                   <form class="user" method="post" action="{{route('subcategorias.update', $reg->id)}}">
                     {{ method_field('put') }}
