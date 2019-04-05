@@ -14,8 +14,7 @@
 Route::resource('categorias', 'admin\CategoriaController');
 Route::resource('subcategorias', 'admin\SubcategoriaController');
 Route::resource('produtos', 'admin\ProdutoController');
-Route::resource('/', 'site\PrincipalController');
-
+Route::get('/', 'site\PrincipalController@index')->name('principal');
 
 
 Auth::routes();

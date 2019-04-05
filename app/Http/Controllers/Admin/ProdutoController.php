@@ -74,7 +74,8 @@ class ProdutoController extends Controller
     
     public function show($id)
     {
-        //
+        $prod = Produto::find($id);
+        return view ('site.detalhes', compact('prod'));
     }
 
     
