@@ -19,10 +19,10 @@
                         <input type="text" class="form-control form-control-user" id="nome" name="nome" placeholder="Nome do produto" value="{{$reg->nome}}">
                     </div>
                     <div class="col-sm-3 mb-3 mb-sm-0">
-                        <input type="number" class="form-control form-control-user" id="val_avista" name="val_avista" placeholder="Valor do produto à vista" value="{{$reg->val_avista}}">
+                        <input type="text" class="form-control form-control-user" id="val_avista" name="val_avista" placeholder="Valor do produto à vista" value="{{$reg->val_avista}}">
                     </div>
                     <div class="col-sm-3 mb-3 mb-sm-0">
-                        <input type="number" class="form-control form-control-user" id="val_parcelado" name="val_parcelado" placeholder="Valor do produto parcelado" value="{{$reg->val_parcelado}}">
+                        <input type="text" class="form-control form-control-user" id="val_parcelado" name="val_parcelado" placeholder="Valor do produto parcelado" value="{{$reg->val_parcelado}}">
                     </div>
                 </div>
                 <div class="form-group row">

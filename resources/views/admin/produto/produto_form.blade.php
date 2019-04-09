@@ -18,15 +18,15 @@
                         <input type="text" class="form-control form-control-user" id="nome" name="nome" placeholder="Nome do produto">
                     </div>
                     <div class="col-sm-3 mb-3 mb-sm-0">
-                        <input type="number" class="form-control form-control-user" id="val_avista" name="val_avista" placeholder="Valor do produto à vista">
+                        <input type="text" class="form-control form-control-user" id="val_avista" name="val_avista" placeholder="Valor do produto à vista">
                     </div>
                     <div class="col-sm-3 mb-3 mb-sm-0">
-                        <input type="number" class="form-control form-control-user" id="val_parcelado" name="val_parcelado" placeholder="Valor do produto parcelado">
+                        <input type="text" class="form-control form-control-user" id="val_parcelado" name="val_parcelado" placeholder="Valor do produto parcelado">
                     </div>
                 </div>
                 <div class="form-group row">
                     <div class="col-sm-4 mb-3 mb-sm-0">
-                            <label for="categoria_id">Qual o número do parcelas?</label>
+                        <label for="categoria_id">Qual o número do parcelas?</label>
                         <input type="number" class="form-control form-control-user" id="num_parcela" name="num_parcela" placeholder="Num. de parcelas">
                     </div>
                     <div class="col-sm-4 mb-3 mb-sm-0">
@@ -44,6 +44,12 @@
                                 <option value="{{$subcategoria->id}}">{{$subcategoria->nome}}</option>
                             @endforeach    
                         </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-12 mb-3 mb-sm-0">
+                        <label for="categoria_id">Quais as características do produto?</label>
+                        <input type="text" class="form-control form-control-user" id="caracteristica" name="caracteristica" placeholder="Digite as características do produto">
                     </div>
                 </div>
                 <div class="form-group row">
@@ -81,4 +87,9 @@ function previewFile() {
     }    
 }
 </script>
+<script>
+        $(document).ready(function() {
+           $('#val_avista').mask("##.###.##0,00", {reverse: true}); 
+        });    
+        </script>
 @endsection

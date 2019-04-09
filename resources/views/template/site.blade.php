@@ -21,7 +21,7 @@
     <!-- Custom stylesheet - for your changes-->
     <link rel="stylesheet" href="css/custom.css">
     <!-- Favicon-->
-    <link rel="shortcut icon" href="favicon.png">
+    <link rel="shortcut icon" href="/img/favicon-32x32.png">
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -46,7 +46,7 @@
         </div>      
       </div>
       <nav class="navbar navbar-expand-lg">
-        <div class="container"><a href="/" class="navbar-brand home"><img src="/img/logo.png" alt="me encanta logo" class="d-none d-md-inline-block" style="width: 190px; height: 70px"><img src="/img/logo.png" alt="me encanta logo" class="d-inline-block d-md-none" style="width: 140px; height: 50px"><span class="sr-only">Obaju - go to homepage</span></a>
+        <div class="container"><a href="/" class="navbar-brand home"><img src="/img/logo.png" alt="me encanta logo" class="d-none d-md-inline-block" style="width: 250px; height: 70px"><img src="/img/logo.png" alt="me encanta logo" class="d-inline-block d-md-none" style="width: 140px; height: 50px"><span class="sr-only">Obaju - go to homepage</span></a>
           <div class="navbar-buttons">
             <button type="button" data-toggle="collapse" data-target="#navigation" class="btn btn-outline-secondary navbar-toggler"><span class="sr-only">Toggle navigation</span><i class="fa fa-align-justify"></i></button>
             <button type="button" data-toggle="collapse" data-target="#search" class="btn btn-outline-secondary navbar-toggler"><span class="sr-only">Toggle search</span><i class="fa fa-search"></i></button>
@@ -59,21 +59,21 @@
                     <div class="row">
                       <div class="col-md-6 col-lg-5">
                         <ul class="list-unstyled mb-3">
-                          <li class="nav-item"><a href="category.html" class="nav-link">Aquecedor de Cera e Termocera</a></li>
-                          <li class="nav-item"><a href="category.html" class="nav-link">Aquecedores de Água para Lavatórios / Cabeleireiros</a></li>
-                          <li class="nav-item"><a href="category.html" class="nav-link">Aquecedor de Toalha para Barba</a></li>
-                          <li class="nav-item"><a href="category.html" class="nav-link">Aquecedor para Pedras Quentes e Cera</a></li>
-                          <li class="nav-item"><a href="category.html" class="nav-link">Babyliss Bob Matic</a></li>
-                          <li class="nav-item"><a href="category.html" class="nav-link">Estufa de Esterilização para Manicure</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Aquecedor de Cera e Termocera</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Aquecedores de Água para Lavatórios / Cabeleireiros</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Aquecedor de Toalha para Barba</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Aquecedor para Pedras Quentes e Cera</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Babyliss Bob Matic</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Estufa de Esterilização para Manicure</a></li>
                         </ul>
                       </div>
                       <div class="col-md-6 col-lg-5">
                           <ul class="list-unstyled mb-3">
-                            <li class="nav-item"><a href="category.html" class="nav-link">Lixa de Unha Elétrica</a></li>
-                            <li class="nav-item"><a href="category.html" class="nav-link">Cabine UV</a></li>
-                            <li class="nav-item"><a href="category.html" class="nav-link">Pedicuro Profissional</a></li>
-                            <li class="nav-item"><a href="category.html" class="nav-link">Secador de Cabelo</a></li>
-                            <li class="nav-item"><a href="category.html" class="nav-link">Vaporizador Capilar e Facial</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">Lixa de Unha Elétrica</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">Cabine UV</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">Pedicuro Profissional</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">Secador de Cabelo</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">Vaporizador Capilar e Facial</a></li>
                           </ul>
                         </div>
                     </div>
@@ -86,22 +86,22 @@
                     <div class="row">
                       <div class="col-md-6 col-lg-5">
                         <ul class="list-unstyled mb-3">
-                          <li class="nav-item"><a href="category.html" class="nav-link">Bobs/ Bigodins</a></li>
-                          <li class="nav-item"><a href="category.html" class="nav-link">Cabeça para Treinamento</a></li>
-                          <li class="nav-item"><a href="category.html" class="nav-link">Carrinho Auxiliar para Cabeleireiros</a></li>
-                          <li class="nav-item"><a href="category.html" class="nav-link">Clips e Grampos</a></li>
-                          <li class="nav-item"><a href="category.html" class="nav-link">Espanadores/Talqueiras</a></li>
-                          <li class="nav-item"><a href="category.html" class="nav-link">Gel e Spray para Cabelo</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Bobs/ Bigodins</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Cabeça para Treinamento</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Carrinho Auxiliar para Cabeleireiros</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Clips e Grampos</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Espanadores/Talqueiras</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Gel e Spray para Cabelo</a></li>
                         </ul>
                       </div>
                       <div class="col-md-6 col-lg-5">
                         <ul class="list-unstyled mb-3">
-                          <li class="nav-item"><a href="category.html" class="nav-link">Protetores de Orelhas</a></li>
-                          <li class="nav-item"><a href="category.html" class="nav-link">Redes/ Touca Nero</a></li>
-                          <li class="nav-item"><a href="category.html" class="nav-link">Tesouras para Corte</a></li>
-                          <li class="nav-item"><a href="category.html" class="nav-link">Toalhas para Cabelo</a></li>
-                          <li class="nav-item"><a href="category.html" class="nav-link">Touca Hot p/ Secador</a></li>
-                          <li class="nav-item"><a href="category.html" class="nav-link">Toucas p/ Banho Creme</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Protetores de Orelhas</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Redes/ Touca Nero</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Tesouras para Corte</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Toalhas para Cabelo</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Touca Hot p/ Secador</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Toucas p/ Banho Creme</a></li>
                         </ul>
                       </div>
                     </div>

@@ -18,7 +18,7 @@ class PrincipalController extends Controller
            
             
         } elseif (request()->sort == ('high_low')) {
-            $produtos = Produto::orderBy('val_avista', 'desc')->paginate(9);
+            $produtos = Produto::orderBy('val_avista', 'desc')->paginate(12);
 
         } else {
             $produtos = Produto::paginate(12);
