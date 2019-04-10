@@ -1,6 +1,9 @@
 @extends('template.admin')
 
 @section('conteudo') 
+<a href="{{route('categorias.create')}}" class="btn btn-primary btn-icon-split">
+    <span class="icon text-white-50"><i class="fas fa-plus"></i></span><span class="text">Nova categoria</span>
+</a><br><br>
 <div class="card shadow mb-4">
     <div class="card-header py-3">
         <h6 class="m-0 font-weight-bold text-primary">Tabela de categorias</h6>
@@ -44,8 +47,4 @@
         </div>
     </div>
 </div>  
-<a href="{{route('categorias.create')}}" class="btn btn-primary btn-icon-split">
-    <span class="icon text-white-50"><i class="fas fa-plus"></i></span><span class="text">Nova categoria</span>
-</a>
-
 @endsection

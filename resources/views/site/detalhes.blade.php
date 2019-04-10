@@ -2,9 +2,8 @@
 
 @section('conteudo')
 <div class="container">
-    <div class="row">
+  <div class="row">
       <div class="col-lg-12">
-        <!-- breadcrumb-->
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/">Home</a></li>
@@ -35,23 +34,28 @@
           </div>
           <div id="details" class="box">
             <p>
-            <h4>Detalhes do produto</h4>
+            <h4>Descrição do produto</h4>
           <p style="text-align: justify">{{$prod->descricao}}</p>
             <h4>Características</h4>
-              <ul>
+              @if (empty($prod->caracteristica)) 
+                <ul>
+                  <li>Nenhuma</li>
+                </ul>
+              @else
+                <ul>
                   @foreach(explode('#', $prod->caracteristica) as $info) 
-                  <li>{{$info}}</li>
-                @endforeach
-              </ul>
+                    <li>{{$info}}</li>
+                  @endforeach
+                </ul>
+              @endif
             <hr>
           </div>
       </div>
-    </div>
-      <!-- /.col-md-9-->
-    </div>
-    <script>
-        $(document).ready(function(){
-          $('#ex1').zoom();
-        });
-      </script>
+  </div>
+</div>
+<script>
+  $(document).ready(function(){
+    $('#ex1').zoom();
+  });
+</script>
 @endsection

@@ -1,6 +1,9 @@
 @extends('template.admin')
 
 @section('conteudo')
+<a href="{{route('produtos.create')}}" class="btn btn-primary btn-icon-split">
+    <span class="icon text-white-50"><i class="fas fa-plus"></i></span><span class="text">Novo produto</span>
+</a><br><br>
 <div class="card shadow mb-4">
     <div class="card-header py-3">
         <h6 class="m-0 font-weight-bold text-primary">Tabela de produtos</h6>
@@ -57,9 +60,6 @@
                 </tbody>
             </table>
         </div>
-        <a href="{{route('produtos.create')}}" class="btn btn-primary btn-icon-split">
-            <span class="icon text-white-50"><i class="fas fa-plus"></i></span><span class="text">Novo produto</span>
-        </a>
     </div>
 </div>  
 @endsection

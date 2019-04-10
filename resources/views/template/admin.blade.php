@@ -6,8 +6,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="description" content="Área administrativa do site Me encanta cosméticos">
+  <meta name="author" content="Láudrin Rei Garralaga">
 
   <title>Admin - Me encanta cosméticos</title>
 
@@ -19,8 +19,9 @@
   <!-- Custom styles for this template-->
   <link href="/css/sb-admin-2.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this page -->
-    <link href="/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+  <!-- Custom styles for this page -->
+  <link href="/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+  <link rel="shortcut icon" href="/img/favicon-32x32.png">
 
 </head>
 
@@ -136,7 +137,7 @@
       <footer class="sticky-footer bg-white ">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Your Website 2019</span>
+            <span>Copyright &copy; Me encanta cosméticos 2019</span>
           </div>
         </div>
       </footer>

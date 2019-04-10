@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Me encanta cosméticos</title>
-    <meta name="description" content="">
+    <meta name="description" content="Site Me encanta cosméticos">
+    <meta name="author" content="Láudrin Rei Garralaga">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
     <!-- Bootstrap CSS-->
@@ -188,7 +189,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-7 mb-2 mb-lg-0">
-            <p class="text-center text-lg-right">©2019 Láudrin Rei Garralaga.</p>
+            <p class="text-center text-lg-right"><span>Copyright &copy; Me encanta cosméticos 2019</span></p>
           </div>
         </div>
       </div>

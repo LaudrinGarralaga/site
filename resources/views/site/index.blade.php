@@ -20,7 +20,6 @@
         </div>
     </div>
 </div>
-
 <section class="details-card">
     <div class="container">
         <div class="row">

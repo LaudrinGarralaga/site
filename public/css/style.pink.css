@@ -3091,10 +3091,11 @@ color: #000000;
 }
 
 .card-title {
-  font-size: 10pt;
+  font-size: 11pt;
   height: 60px;
   text-transform: uppercase;
-  text-align: center
+  text-align: center;
+  margin-top: -15px;
 }
 
 .card-text {

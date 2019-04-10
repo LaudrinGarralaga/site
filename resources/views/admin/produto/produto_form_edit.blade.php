@@ -54,16 +54,22 @@
                     </div>
                 </div>
                 <div class="form-group row">
+                        <div class="col-sm-12 mb-3 mb-sm-0">
+                            <label for="categoria_id">Quais as características do produto?</label>
+                            <input type="text" class="form-control form-control-user" id="caracteristica" name="caracteristica" placeholder="Digite as características do produto" value="{{$reg->caracteristica}}">
+                        </div>
+                    </div>
+                <div class="form-group row">
                     <div class="col-sm-6 mb-3 mb-sm-0">
                         <label for="descricao">Descrição do produto</label>
                         <textarea class="form-control" id="descricao" name="descricao" rows="3" >{{$reg->descricao}}</textarea><br>
                     </div>        
                     <div class="col-sm-3" style="text-align: center">
                         @php
-                            if (file_exists(public_path('img/'.$reg->image))) {
-                                $foto = '../img/'.$reg->image;
+                            if (file_exists(public_path('/img/'. $reg->image))) {
+                                $foto = '/../img/'. $reg->image;
                             } else {
-                                $foto = '../img/sem_foto.jpg';
+                                $foto = '/../img/sem_foto.jpg';
                             }
                         @endphp
                         {!!"<img src=$foto id='imagem' height='150' width='200' alt='Foto'>"!!}
