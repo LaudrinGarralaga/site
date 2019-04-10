@@ -88,8 +88,8 @@ function previewFile() {
 }
 </script>
 <script>
-        $(document).ready(function() {
-           $('#val_avista').mask("##.###.##0,00", {reverse: true}); 
-        });    
-        </script>
+    $(document).ready(function() {
+        $('#val_avista').mask("##.###.##0,00", {reverse: true}); 
+    });    
+</script>
 @endsection

@@ -17,8 +17,12 @@
       <div class="col-lg-12 ">
           <div id="productMain" class="row">
             <div class="col-md-6">
-              <div data-slider-id="1" class="owl-carousel shop-detail-carousel">
-                <div class="item"> <img src="/img/{{$prod->image}}" alt="" class="img-fluid" style=""></div> 
+              <div id="mainImage">
+                <div class="item">        
+                  <span class='zoom' id='ex1'>
+                      <img src="/img/{{$prod->image}}" alt="" class="img-fluid">
+                  </span>
+                </div> 
               </div>
             </div>
             <div class="col-md-6">
@@ -45,4 +49,9 @@
     </div>
       <!-- /.col-md-9-->
     </div>
+    <script>
+        $(document).ready(function(){
+          $('#ex1').zoom();
+        });
+      </script>
 @endsection

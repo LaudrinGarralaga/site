@@ -13,13 +13,14 @@
     <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
     <!-- Google fonts - Roboto -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
     <!-- owl carousel-->
     <link rel="stylesheet" href="/owl.carousel/assets/owl.carousel.css">
     <link rel="stylesheet" href="/owl.carousel/assets/owl.theme.default.css">
     <!-- theme stylesheet-->
     <link rel="stylesheet" href="/css/style.pink.css" id="theme-stylesheet">
     <!-- Custom stylesheet - for your changes-->
-    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="/css/custom.css">
     <!-- Favicon-->
     <link rel="shortcut icon" href="/img/favicon-32x32.png">
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
@@ -53,55 +54,69 @@
           </div>
           <div id="navigation" class="collapse navbar-collapse">
             <ul class="navbar-nav mr-auto">
-              <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="200" class="dropdown-toggle nav-link">APARELHOS<b class="caret"></b></a>
+              <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="200" class="dropdown-toggle nav-link">CABELO<b class="caret"></b></a>
                 <ul class="dropdown-menu megamenu">
                   <li>
                     <div class="row">
                       <div class="col-md-6 col-lg-5">
                         <ul class="list-unstyled mb-3">
-                          <li class="nav-item"><a href="#" class="nav-link">Aquecedor de Cera e Termocera</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Aquecedores de Água para Lavatórios / Cabeleireiros</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Aquecedor de Toalha para Barba</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Aquecedor para Pedras Quentes e Cera</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Babyliss Bob Matic</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Estufa de Esterilização para Manicure</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Acessórios</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Condicionador/Shampoo</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Escovas/Pentes</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Finalizador</a></li>
                         </ul>
                       </div>
                       <div class="col-md-6 col-lg-5">
                           <ul class="list-unstyled mb-3">
-                            <li class="nav-item"><a href="#" class="nav-link">Lixa de Unha Elétrica</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link">Cabine UV</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link">Pedicuro Profissional</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link">Secador de Cabelo</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link">Vaporizador Capilar e Facial</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">Óleos</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">Outras Colorações</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">Tintura</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">Toucas</a></li>
                           </ul>
                         </div>
                     </div>
                   </li>
                 </ul>
               </li>
-              <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="200" class="dropdown-toggle nav-link">Cabelo<b class="caret"></b></a>
+              <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="200" class="dropdown-toggle nav-link">Depilação<b class="caret"></b></a>
+                
+              </li>
+              <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="200" class="dropdown-toggle nav-link">MANICURE<b class="caret"></b></a>
                 <ul class="dropdown-menu megamenu">
                   <li>
                     <div class="row">
                       <div class="col-md-6 col-lg-5">
                         <ul class="list-unstyled mb-3">
-                          <li class="nav-item"><a href="#" class="nav-link">Bobs/ Bigodins</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Cabeça para Treinamento</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Carrinho Auxiliar para Cabeleireiros</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Clips e Grampos</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Espanadores/Talqueiras</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Gel e Spray para Cabelo</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Acessórios</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Unhas/Pés</a></li>
                         </ul>
                       </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="200" class="dropdown-toggle nav-link">MAQUIAGEM<b class="caret"></b></a>
+                <ul class="dropdown-menu megamenu">
+                  <li>
+                    <div class="row">
                       <div class="col-md-6 col-lg-5">
                         <ul class="list-unstyled mb-3">
-                          <li class="nav-item"><a href="#" class="nav-link">Protetores de Orelhas</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Redes/ Touca Nero</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Tesouras para Corte</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Toalhas para Cabelo</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Touca Hot p/ Secador</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Toucas p/ Banho Creme</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Cílios</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="200" class="dropdown-toggle nav-link">ACESSÓRIOS PROFISSIONAIS<b class="caret"></b></a>
+                <ul class="dropdown-menu megamenu">
+                  <li>
+                    <div class="row">
+                      <div class="col-md-6 col-lg-5">
+                        <ul class="list-unstyled mb-3">
+                          <li class="nav-item"><a href="#" class="nav-link">Aventais/Capas</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Descartáveis</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Luvas</a></li>
                         </ul>
                       </div>
                     </div>
@@ -181,6 +196,8 @@
     <!-- *** COPYRIGHT END ***-->
     <!-- JavaScript files-->
     <script src="/jquery/jquery.min.js"></script>
+    <script src="/jquery/jquery.zoom.js"></script>
+    <script src="/jquery/jquery.zoom.min.js"></script>
     <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="/jquery.cookie/jquery.cookie.js"> </script>
     <script src="/owl.carousel/owl.carousel.min.js"></script>

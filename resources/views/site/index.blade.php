@@ -8,13 +8,13 @@
             <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/">Home</a></li>
-                <div class="products-header" style="text-align: right">
+                {{--<div class="products-header" style="text-align: right">
                     <div>
                         <strong>Preço: </strong>
                         <a href="{{route('principal', ['categoria' => request()->categoria, 'sort' => 'low_high'])}}">Crescente |</a>
                         <a href="{{route('principal', ['categoria' => request()->categoria, 'sort' => 'high_low'])}}">Decrescente</a>
                     </div>
-                </div>
+                </div>--}}
             </ol>
             </nav>
         </div>
@@ -39,9 +39,10 @@
                 </div>
             </div>
             @endforeach 
-        {{--{{$produtos->links()}}--}}
-        {{$produtos->appends(request()->input())->links()}} 
+        
     </div>
+    {{--{{$produtos->links()}}--}}
+    {{$produtos->appends(request()->input())->links()}} 
 </section> 
   
 @endsection
