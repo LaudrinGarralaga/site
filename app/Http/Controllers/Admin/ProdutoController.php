@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Intervention\Image\ImageManagerStatic as Image;
 use App\Categoria;
 use App\Produto;
 use App\Subcategoria;
@@ -54,14 +55,16 @@ class ProdutoController extends Controller
         $produto->subcategoria_id = $request->input('subcategoria_id');
 
         if ($request->hasfile('image')) {
-            $file = $request->file('image');
-            $filename = $file->getClientOriginalName();
-            $file->move('img/', $filename);
+            $image       = $request->file('image');
+            $filename    = $image->getClientOriginalName();
+
+            $image_resize = Image::make($image->getRealPath());              
+            $image_resize->resize(540, 678);
+            $image_resize->save(public_path('img/' .$filename));
             $produto->image = $filename;
         }
 
         // Realiza a inclusão
-        
 
         // Exibe uma mensagem de sucesso se gravou os dados no bando senão exibe uma de erro
         if ($produto->save()) {
@@ -76,7 +79,9 @@ class ProdutoController extends Controller
     public function show($id)
     {
         $prod = Produto::find($id);
-        return view ('site.detalhes', compact('prod'));
+        $categorias = Categoria::all();
+        $subcategorias = Subcategoria::all();
+        return view ('site.detalhes', compact('prod', 'categorias', 'subcategorias'));
     }
 
     

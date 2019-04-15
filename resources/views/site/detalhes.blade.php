@@ -18,9 +18,7 @@
             <div class="col-md-6">
               <div id="mainImage">
                 <div class="item">        
-                  <span class='zoom' id='ex1'>
-                      <img src="/img/{{$prod->image}}" alt="" class="img-fluid">
-                  </span>
+                  <img src="/img/{{$prod->image}}" alt="" class="img-fluid">  
                 </div> 
               </div>
             </div>

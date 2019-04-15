@@ -75,7 +75,7 @@
                         {!!"<img src=$foto id='imagem' height='150' width='200' alt='Foto'>"!!}
                         <p>
                             <div class="form-group">
-                                <input type="file" id="foto" name="foto" onchange="previewFile()" class="form-control">
+                                <input type="file" id="foto" name="image" onchange="previewFile()" class="form-control">
                             </div>
                         </p>
                     </div>       

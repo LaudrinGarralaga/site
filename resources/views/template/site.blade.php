@@ -55,75 +55,84 @@
           </div>
           <div id="navigation" class="collapse navbar-collapse">
             <ul class="navbar-nav mr-auto">
-              <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="200" class="dropdown-toggle nav-link">CABELO<b class="caret"></b></a>
+              @foreach($categorias as $categoria)
+            <li class="nav-item dropdown menu-large"><a href="{{route('principal.categoria', $categoria->id)}}" class="dropdown-toggle nav-link">{{$categoria->nome}}<b class="caret"></b></a>
                 <ul class="dropdown-menu megamenu">
                   <li>
                     <div class="row">
                       <div class="col-md-6 col-lg-5">
                         <ul class="list-unstyled mb-3">
-                          <li class="nav-item"><a href="#" class="nav-link">Acessórios</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Condicionador/Shampoo</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Escovas/Pentes</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Finalizador</a></li>
+                          @foreach($subcategorias as $subcategoria)
+                          @if ($subcategoria->categoria_id == $categoria->id)
+                          <li class="nav-item"><a href="{{route('principal.subcategoria', $subcategoria->id)}}" class="nav-link">{{$subcategoria->nome}}</a></li>
+                          @else
+                          @endif
+                          @endforeach 
+                          {{-- <li class="nav-item"><a href="{{route('principal', ['categoria' => request()->subcategoria, 'subcategoria' => 'acessorios'])}}" class="nav-link">Acessórios</a></li>
+                          <li class="nav-item"><a href="{{route('principal', ['categoria' => request()->subcategoria, 'subcategoria' => 'condicionador/shampoo'])}}" class="nav-link">Condicionador/Shampoo</a></li>
+                          <li class="nav-item"><a href="{{route('principal', ['categoria' => request()->subcategoria, 'subcategoria' => 'escovas/pentes'])}}" class="nav-link">Escovas/Pentes</a></li>
+                          <li class="nav-item"><a href="{{route('principal', ['categoria' => request()->subcategoria, 'subcategoria' => 'finalizador'])}}" class="nav-link">Finalizador</a></li>
+                          --}}
                         </ul>
                       </div>
                       <div class="col-md-6 col-lg-5">
                           <ul class="list-unstyled mb-3">
-                            <li class="nav-item"><a href="#" class="nav-link">Óleos</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link">Outras Colorações</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link">Tintura</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link">Toucas</a></li>
-                          </ul>
+                            {{-- <li class="nav-item"><a href="{{route('principal', ['categoria' => request()->categoria, 'sort' => 'low_high'])}}" class="nav-link">Óleos</a></li>
+                            <li class="nav-item"><a href="{{route('principal', ['categoria' => request()->categoria, 'sort' => 'low_high'])}}" class="nav-link">Outras Colorações</a></li>
+                            <li class="nav-item"><a href="{{route('principal', ['categoria' => request()->categoria, 'sort' => 'low_high'])}}" class="nav-link">Tintura</a></li>
+                            <li class="nav-item"><a href="{{route('principal', ['categoria' => request()->categoria, 'sort' => 'low_high'])}}" class="nav-link">Toucas</a></li>
+                          </ul> --}}
                         </div>
                     </div>
                   </li>
                 </ul>
               </li>
-              <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="200" class="dropdown-toggle nav-link">Depilação<b class="caret"></b></a>
+              @endforeach 
+              {{-- <li class="nav-item dropdown menu-large"><a href="{{route('principal', ['categoria' => request()->categoria, 'sort' => 'low_high'])}}" data-toggle="dropdown" data-hover="dropdown" data-delay="200" class="dropdown-toggle nav-link">Depilação<b class="caret"></b></a>
                 
               </li>
-              <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="200" class="dropdown-toggle nav-link">MANICURE<b class="caret"></b></a>
+              <li class="nav-item dropdown menu-large"><a href="{{route('principal', ['categoria' => request()->categoria, 'sort' => 'low_high'])}}" data-toggle="dropdown" data-hover="dropdown" data-delay="200" class="dropdown-toggle nav-link">MANICURE<b class="caret"></b></a>
                 <ul class="dropdown-menu megamenu">
                   <li>
                     <div class="row">
                       <div class="col-md-6 col-lg-5">
                         <ul class="list-unstyled mb-3">
-                          <li class="nav-item"><a href="#" class="nav-link">Acessórios</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Unhas/Pés</a></li>
+                          <li class="nav-item"><a href="{{route('principal', ['categoria' => request()->categoria, 'sort' => 'low_high'])}}" class="nav-link">Acessórios</a></li>
+                          <li class="nav-item"><a href="{{route('principal', ['categoria' => request()->categoria, 'sort' => 'low_high'])}}" class="nav-link">Unhas/Pés</a></li>
                         </ul>
                       </div>
                     </div>
                   </li>
                 </ul>
               </li>
-              <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="200" class="dropdown-toggle nav-link">MAQUIAGEM<b class="caret"></b></a>
+              <li class="nav-item dropdown menu-large"><a href="{{route('principal', ['categoria' => request()->categoria, 'sort' => 'low_high'])}}" data-toggle="dropdown" data-hover="dropdown" data-delay="200" class="dropdown-toggle nav-link">MAQUIAGEM<b class="caret"></b></a>
                 <ul class="dropdown-menu megamenu">
                   <li>
                     <div class="row">
                       <div class="col-md-6 col-lg-5">
                         <ul class="list-unstyled mb-3">
-                          <li class="nav-item"><a href="#" class="nav-link">Cílios</a></li>
+                          <li class="nav-item"><a href="{{route('principal', ['categoria' => request()->categoria, 'sort' => 'low_high'])}}" class="nav-link">Cílios</a></li>
                         </ul>
                       </div>
                     </div>
                   </li>
                 </ul>
               </li>
-              <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="200" class="dropdown-toggle nav-link">ACESSÓRIOS PROFISSIONAIS<b class="caret"></b></a>
+              <li class="nav-item dropdown menu-large"><a href="{{route('principal', ['categoria' => request()->categoria, 'sort' => 'low_high'])}}" data-toggle="dropdown" data-hover="dropdown" data-delay="200" class="dropdown-toggle nav-link">ACESSÓRIOS PROFISSIONAIS<b class="caret"></b></a>
                 <ul class="dropdown-menu megamenu">
                   <li>
                     <div class="row">
                       <div class="col-md-6 col-lg-5">
                         <ul class="list-unstyled mb-3">
-                          <li class="nav-item"><a href="#" class="nav-link">Aventais/Capas</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Descartáveis</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Luvas</a></li>
+                          <li class="nav-item"><a href="{{route('principal', ['categoria' => request()->categoria, 'sort' => 'low_high'])}}" class="nav-link">Aventais/Capas</a></li>
+                          <li class="nav-item"><a href="{{route('principal', ['categoria' => request()->categoria, 'sort' => 'low_high'])}}" class="nav-link">Descartáveis</a></li>
+                          <li class="nav-item"><a href="{{route('principal', ['categoria' => request()->categoria, 'sort' => 'low_high'])}}" class="nav-link">Luvas</a></li>
                         </ul>
                       </div>
                     </div>
                   </li>
                 </ul>
-              </li>
+              </li> --}}
             </ul>
             <div class="navbar-buttons d-flex justify-content-end">
               <!-- /.nav-collapse-->
