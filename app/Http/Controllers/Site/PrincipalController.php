@@ -17,13 +17,13 @@ class PrincipalController extends Controller
        
         if(request()->sort == ('low_high')) {
             
-            $produtos = Produto::orderBy('val_avista')->paginate(12);
+            $produtos = Produto::orderBy('val_avista')->paginate(16);
             
         } elseif (request()->sort == ('high_low')) {
-            $produtos = Produto::orderBy('val_avista', 'desc')->paginate(12);         
+            $produtos = Produto::orderBy('val_avista', 'desc')->paginate(16);         
             
         } else {
-            $produtos = Produto::paginate(12);
+            $produtos = Produto::paginate(16);
         }
         
         $categorias = Categoria::all();
@@ -35,7 +35,7 @@ class PrincipalController extends Controller
     {
         $categorias = Categoria::all();
         $subcategorias = Subcategoria::all();
-        $produtos = Produto::where('subcategoria_id', '=', $id)->paginate(12);
+        $produtos = Produto::where('subcategoria_id', '=', $id)->paginate(16);
         return view ('site.subcategorias', compact('produtos', 'categorias', 'subcategorias'));
     }
 
@@ -43,7 +43,7 @@ class PrincipalController extends Controller
     {
         $categorias = Categoria::all();
         $subcategorias = Subcategoria::all();
-        $produtos = Produto::where('categoria_id', '=', $id)->paginate(12);
+        $produtos = Produto::where('categoria_id', '=', $id)->paginate(16);
         return view ('site.categorias', compact('produtos', 'categorias', 'subcategorias'));
     }
 

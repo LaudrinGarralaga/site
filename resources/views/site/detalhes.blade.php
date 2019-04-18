@@ -17,8 +17,10 @@
           <div id="productMain" class="row">
             <div class="col-md-6">
               <div id="mainImage">
-                <div class="item">        
-                  <img src="/img/{{$prod->image}}" alt="" class="img-fluid">  
+                <div class="item">   
+                    <span class='zoom' id='ex1'>
+                      <img src="/img/{{$prod->image}}" alt=""class="img-fluid" width="540px" height="600px"> 
+                    </span>
                 </div> 
               </div>
             </div>

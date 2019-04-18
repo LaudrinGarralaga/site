@@ -59,7 +59,7 @@ class ProdutoController extends Controller
             $filename    = $image->getClientOriginalName();
 
             $image_resize = Image::make($image->getRealPath());              
-            $image_resize->resize(540, 678);
+            //$image_resize->resize(540, 678);
             $image_resize->save(public_path('img/' .$filename));
             $produto->image = $filename;
         }
