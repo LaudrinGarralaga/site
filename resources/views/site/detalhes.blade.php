@@ -26,29 +26,49 @@
             </div>
             <div class="col-md-6">
               <div class="box">
-                <h1 class="text-center">{{$prod->nome}}</h1>
-                <p class="goToDescription"><a href="#details" class="scroll-to">Clique para ver detalhes do produto</a></p>
-                <p class="price">à vista R${{$prod->val_avista}} <br> <span style="font-size: 15pt">ou {{$prod->num_parcela}}x de R${{$prod->val_parcelado}} sem juros</span></p>    
+                <h1 class="text-center" style="font-size: 15pt">{{$prod->nome}} - <span class="codigo" style="color: red">CÓD. {{$prod->codigo}}</span></h1>
+                @if (empty($prod->val_parcelado_ata))
+                  <p class="goToDescription"><a href="#details" class="scroll-to">Clique para ver detalhes do produto</a></p>
+                  <p class="price" style="font-size: 12pt">R${{$prod->val_parcelado_un}} a un. em 3x sem juros ou<br> <span class="card-text" style="font-size: 15pt">R${{$prod->val_avista_un}} a un. à vista (10% de desconto)</span></p>    
+                @else
+                  <p class="goToDescription"><a href="#details" class="scroll-to">Clique para ver detalhes do produto</a></p>
+                  <p class="price" style="font-size: 12pt">R${{$prod->val_parcelado_ata}} o pacote em 3x sem juros ou<br> <span class="card-text" style="font-size: 15pt">R${{$prod->val_avista_ata}} o pacote à vista (10% de desconto)</span></p> 
+                  <p class="price" style="font-size: 12pt">R${{$prod->val_parcelado_un}} a un. em 3x sem juros ou<br> <span class="card-text" style="font-size: 15pt">R${{$prod->val_avista_un}} a un. à vista (10% de desconto)</span></p>   
+                @endif   
               </div>
             </div>
           </div>
           <div id="details" class="box">
             <p>
             <h4>Descrição do produto</h4>
-          <p style="text-align: justify">{{$prod->descricao}}</p>
+              <p style="text-align: justify">{{$prod->descricao}}</p>
+              <hr>
+            <h4>Modo de usar</h4>
+            @if (($prod->como_usar))
+              <p style="text-align: justify">{{$prod->como_usar}}</p>
+            @else
+              <p>Nenhum</p>
+            @endif
+            <hr>
             <h4>Características</h4>
-              @if (empty($prod->caracteristica)) 
+              @if (empty($prod->caracteristicas)) 
                 <ul>
                   <li>Nenhuma</li>
                 </ul>
               @else
                 <ul>
-                  @foreach(explode('#', $prod->caracteristica) as $info) 
+                  @foreach(explode('#', $prod->caracteristicas) as $info) 
                     <li>{{$info}}</li>
                   @endforeach
                 </ul>
               @endif
-            <hr>
+              <hr>
+            <h4>Observações</h4>
+            @if (($prod->como_usar))
+              <p style="text-align: justify">{{$prod->observacoes}}</p>
+            @else
+              Sem observações
+            @endif
           </div>
       </div>
   </div>

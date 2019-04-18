@@ -26,25 +26,25 @@
                 <div class="form-group row">
                     <div class="col-sm-3 mb-3 mb-sm-0">
                         <label for="categoria_id">Valor à vista (unidade)</label>
-                        <input type="text" class="form-control form-control-user" id="val_avista_un" name="val_avista_un" placeholder="valor da un. do produto à vista">
+                        <input type="text" class="form-control form-control-user money" id="valor1" name="val_avista_un" placeholder="valor da un. do produto à vista">
                     </div>
                     <div class="col-sm-3 mb-3 mb-sm-0">
                         <label for="categoria_id">Valor parcelado (unidade)</label>
-                        <input type="text" class="form-control form-control-user" id="val_parcelado_un" name="val_parcelado_un" placeholder="Valor da un. do produto parcelado">
+                        <input type="text" class="form-control form-control-user money" id="valor2" name="val_parcelado_un" placeholder="Valor da un. do produto parcelado">
                     </div>
                     <div class="col-sm-3 mb-3 mb-sm-0">
                         <label for="categoria_id">Valor à vista (atacado)</label>
-                        <input type="text" class="form-control form-control-user" id="val_avista_ata" name="val_avista_ata" placeholder="Valor atacado do produto à vista">
+                        <input type="text" class="form-control form-control-user money" id="valor3" name="val_avista_ata" placeholder="Valor atacado do produto à vista">
                     </div>
                     <div class="col-sm-3 mb-3 mb-sm-0">
                         <label for="categoria_id">Valor parcelado (atacado)</label>
-                        <input type="text" class="form-control form-control-user" id="val_parcelado_ata" name="val_parcelado_ata" placeholder="Valor atacado do produto parcelado">
+                        <input type="text" class="form-control form-control-user money" id="valor4" name="val_parcelado_ata" placeholder="Valor atacado do produto parcelado">
                     </div>
                 </div>
                 <div class="form-group row">
                     <div class="col-sm-6 mb-3 mb-sm-0">
                         <label for="categoria_id">Qual categoria pertence este produto?</label>
-                        <select class="form-control" id="categoria_id" name="categoria_id">
+                        <select class="form-control" id="categoria" name="categoria_id" sel>
                             @foreach ($categorias as $categoria)    
                                 <option value="{{$categoria->id}}">{{$categoria->nome}}</option>
                             @endforeach    
@@ -52,10 +52,8 @@
                     </div>
                     <div class="col-sm-6 mb-3 mb-sm-0">
                         <label for="categoria_id">Qual sub-categoria pertence este produto?</label>
-                        <select class="form-control" id="subcategoria_id" name="subcategoria_id">
-                            @foreach ($subcategorias as $subcategoria)    
-                                <option value="{{$subcategoria->id}}">{{$subcategoria->nome}}</option>
-                            @endforeach    
+                        <select class="form-control" id="subcategoria" name="subcategoria_id">
+                             <option value=""></option>  
                         </select>
                     </div>
                 </div>
@@ -108,9 +106,26 @@ function previewFile() {
     }    
 }
 </script>
+
 <script>
     $(document).ready(function() {
-        $('#val_avista').mask("##.###.##0,00", {reverse: true}); 
-    });    
+        $('#categoria').on('change', function(e){
+        console.log(e);
+        var state_id = e.target.value;
+
+        $.get('{{ url('information') }}/create/ajax-state?state_id=' + state_id, function(data) {
+            console.log(data);
+            $('#subcategoria').empty();
+            $.each(data, function(index,subCatObj){
+                $('#subcategoria').append('<option value="'+subCatObj.id+'">'+subCatObj.nome+'</option>');
+            });
+        });
+    });
+});
+</script>
+<script>
+    $(document).ready(function() {
+        $('#valor1,#valor2,#valor3,#valor4').mask("##.###.##0,00", {reverse: true}); 
+    });       
 </script>
 @endsection

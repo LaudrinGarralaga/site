@@ -14,9 +14,7 @@
                 <thead>
                     <tr>
                         <th>Nome</th>
-                        <th>Val. À vista</th>
-                        <th>Val. Parcelado</th>
-                        <th>Num. Parcela</th>
+                        <th>Código</th>
                         <th>Categoria</th>
                         <th>Sub-categoria</th>
                         <th>Ações</th>
@@ -25,9 +23,7 @@
                 <tfoot>
                     <tr>
                         <th>Nome</th>
-                        <th>Val. À vista</th>
-                        <th>Val. Parcelado</th>
-                        <th>Num. Parcela</th>
+                        <th>Código</th>
                         <th>Categoria</th>
                         <th>Sub-categoria</th>
                         <th>Ações</th>
@@ -37,9 +33,7 @@
                     @foreach($produtos as $produto)
                     <tr>
                         <td>{{$produto->nome}}</td>
-                        <td>{{$produto->val_avista}}</td>
-                        <td>{{$produto->val_parcelado}}</td>
-                        <td>{{$produto->num_parcela}}</td>
+                        <td>{{$produto->codigo}}</td>
                         <td>{{$produto->categoria->nome}}</td>
                         <td>{{$produto->subcategoria->nome}}</td>
                         <td> <a href='{{route('produtos.edit', $produto->id)}}'

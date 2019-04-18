@@ -143,11 +143,12 @@
       </nav>
       <div id="search" class="collapse">
         <div class="container">
-          <form role="search" class="ml-auto">
+          <form role="search" class="ml-auto" method="post" action="{{route('site.filtro')}}">
+              {{ csrf_field() }}
             <div class="input-group">
-              <input type="text" placeholder="Buscar produto" class="form-control">
+              <input type="text" placeholder="Buscar produto" class="form-control" name="nome">
               <div class="input-group-append">
-                <button type="button" class="btn btn-primary"><i class="fa fa-search"></i></button>
+                <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
               </div>
             </div>
           </form>
@@ -198,7 +199,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-7 mb-2 mb-lg-0">
-            <p class="text-center text-lg-right"><span>Copyright &copy; Me encanta cosméticos 2019</span></p>
+            <p class="text-center text-lg-right"><span>Copyright &copy; Láudrin R. Garralaga</span></p>
           </div>
         </div>
       </div>
@@ -208,6 +209,8 @@
     <script src="/jquery/jquery.min.js"></script>
     <script src="/jquery/jquery.zoom.js"></script>
     <script src="/jquery/jquery.zoom.min.js"></script>
+    <script src="/jquery/jquery.mask.min.js"></script>
+    <script src="/jquery/jquery.mask.js"></script>
     <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="/jquery.cookie/jquery.cookie.js"> </script>
     <script src="/owl.carousel/owl.carousel.min.js"></script>

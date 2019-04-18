@@ -47,4 +47,17 @@ class PrincipalController extends Controller
         return view ('site.categorias', compact('produtos', 'categorias', 'subcategorias'));
     }
 
+    public function filtro(Request $request)
+    {
+        $categorias = Categoria::all();
+        $subcategorias = Subcategoria::all();
+
+        $nome = $request->nome;
+        
+        $produtos = Produto::where('nome', 'like', '%' . $nome . '%')
+                            ->orderBy('nome')->paginate(16);
+
+        return view ('site.index', compact('produtos', 'categorias', 'subcategorias'));
+    }
+
 }

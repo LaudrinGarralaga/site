@@ -46,11 +46,15 @@ class ProdutoController extends Controller
 
         // Obtém os dados do formulário
         $produto->nome = $request->input('nome');
-        $produto->val_avista = $request->input('val_avista');
-        $produto->val_parcelado = $request->input('val_parcelado');
-        $produto->num_parcela = $request->input('num_parcela');
+        $produto->codigo = $request->input('codigo');
+        $produto->val_avista_un = $request->input('val_avista_un');
+        $produto->val_parcelado_un = $request->input('val_parcelado_un');
+        $produto->val_avista_ata = $request->input('val_avista_ata');
+        $produto->val_parcelado_ata = $request->input('val_parcelado_ata');
         $produto->descricao = $request->input('descricao');
-        $produto->caracteristica = $request->input('caracteristica');
+        $produto->caracteristicas = $request->input('caracteristicas');
+        $produto->como_usar = $request->input('como_usar');
+        $produto->observacoes = $request->input('observacoes');
         $produto->categoria_id = $request->input('categoria_id');
         $produto->subcategoria_id = $request->input('subcategoria_id');
 
@@ -108,11 +112,15 @@ class ProdutoController extends Controller
         $reg = Produto::find($id);
 
         $reg->nome = $request->input('nome');
-        $reg->val_avista = $request->input('val_avista');
-        $reg->val_parcelado = $request->input('val_parcelado');
-        $reg->num_parcela = $request->input('num_parcela');
+        $reg->codigo = $request->input('codigo');
+        $reg->val_avista_un = $request->input('val_avista_un');
+        $reg->val_parcelado_un = $request->input('val_parcelado_un');
+        $reg->val_avista_ata = $request->input('val_avista_ata');
+        $reg->val_parcelado_ata = $request->input('val_parcelado_ata');
         $reg->descricao = $request->input('descricao');
-        $reg->caracteristica = $request->input('caracteristica');
+        $reg->caracteristicas = $request->input('caracteristicas');
+        $reg->como_usar = $request->input('como_usar');
+        $reg->observacoes = $request->input('observacoes');
         $reg->categoria_id = $request->input('categoria_id');
         $reg->subcategoria_id = $request->input('subcategoria_id');
 

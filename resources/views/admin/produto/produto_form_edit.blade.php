@@ -15,24 +15,37 @@
                     {{ method_field('put') }}
                     {{ csrf_field() }}
                 <div class="form-group row">
-                    <div class="col-sm-6 mb-3 mb-sm-0">
-                        <input type="text" class="form-control form-control-user" id="nome" name="nome" placeholder="Nome do produto" value="{{$reg->nome}}">
+                    <div class="col-sm-8 mb-3 mb-sm-0">
+                        <label for="categoria_id">Nome do produto</label>
+                        <input type="text" class="form-control form-control-user" id="nome" name="nome" placeholder="digite o nome do produto" value="{{$reg->nome}}">
                     </div>
-                    <div class="col-sm-3 mb-3 mb-sm-0">
-                        <input type="text" class="form-control form-control-user" id="val_avista" name="val_avista" placeholder="Valor do produto à vista" value="{{$reg->val_avista}}">
-                    </div>
-                    <div class="col-sm-3 mb-3 mb-sm-0">
-                        <input type="text" class="form-control form-control-user" id="val_parcelado" name="val_parcelado" placeholder="Valor do produto parcelado" value="{{$reg->val_parcelado}}">
+                    <div class="col-sm-4 mb-3 mb-sm-0">
+                        <label for="categoria_id">Código do produto</label>
+                        <input type="text" class="form-control form-control-user" id="codigo" name="codigo" placeholder="digite o código do produto" value="{{$reg->codigo}}">
                     </div>
                 </div>
                 <div class="form-group row">
-                    <div class="col-sm-4 mb-3 mb-sm-0">
-                            <label for="categoria_id">Qual o número do parcelas?</label>
-                        <input type="number" class="form-control form-control-user" id="num_parcela" name="num_parcela" placeholder="Num. de parcelas" value="{{$reg->num_parcela}}">
+                    <div class="col-sm-3 mb-3 mb-sm-0">
+                        <label for="categoria_id">Valor à vista (unidade)</label>
+                        <input type="text" class="form-control form-control-user money" id="valor1" name="val_avista_un" placeholder="valor da un. do produto à vista" value="{{$reg->val_avista_un}}">
                     </div>
-                    <div class="col-sm-4 mb-3 mb-sm-0">
+                    <div class="col-sm-3 mb-3 mb-sm-0">
+                        <label for="categoria_id">Valor parcelado (unidade)</label>
+                        <input type="text" class="form-control form-control-user money" id="valor2" name="val_parcelado_un" placeholder="Valor da un. do produto parcelado" value="{{$reg->val_parcelado_un}}">
+                    </div>
+                    <div class="col-sm-3 mb-3 mb-sm-0">
+                        <label for="categoria_id">Valor à vista (atacado)</label>
+                        <input type="text" class="form-control form-control-user money" id="valor3" name="val_avista_ata" placeholder="Valor atacado do produto à vista" value="{{$reg->val_avista_ata}}">
+                    </div>
+                    <div class="col-sm-3 mb-3 mb-sm-0">
+                        <label for="categoria_id">Valor parcelado (atacado)</label>
+                        <input type="text" class="form-control form-control-user money" id="valor4" name="val_parcelado_ata" placeholder="Valor atacado do produto parcelado" value="{{$reg->val_parcelado_ata}}">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
                         <label for="categoria_id">Qual categoria pertence este produto?</label>
-                        <select class="form-control" id="categoria_id" name="categoria_id">
+                        <select class="form-control" id="categoria" name="categoria_id">
                             @foreach ($categorias as $categoria)    
                                 <option value="{{$categoria->id}}"
                                      @if ((isset($reg) && $reg->categoria_id==$categoria->id) 
@@ -41,9 +54,9 @@
                             @endforeach    
                         </select>
                     </div>
-                    <div class="col-sm-4 mb-3 mb-sm-0">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
                         <label for="categoria_id">Qual sub-categoria pertence esta produto?</label>
-                        <select class="form-control" id="subcategoria_id" name="subcategoria_id">
+                        <select class="form-control" id="subcategoria" name="subcategoria_id">
                             @foreach ($subcategorias as $subcategoria)    
                                 <option value="{{$subcategoria->id}}"
                                 @if ((isset($reg) && $reg->subcategoria_id==$subcategoria->id) 
@@ -53,17 +66,25 @@
                         </select>
                     </div>
                 </div>
-                <div class="form-group row">
-                        <div class="col-sm-12 mb-3 mb-sm-0">
-                            <label for="categoria_id">Quais as características do produto?</label>
-                            <input type="text" class="form-control form-control-user" id="caracteristica" name="caracteristica" placeholder="Digite as características do produto" value="{{$reg->caracteristica}}">
-                        </div>
+                <div class="form-group row">      
+                   <div class="col-sm-6 mb-3 mb-sm-0">
+                        <label for="exampleFormControlTextarea1">Descrição</label>
+                        <textarea class="form-control" id="descricao" name="descricao" rows="3">{{$reg->descricao}}</textarea><br>
                     </div>
-                <div class="form-group row">
                     <div class="col-sm-6 mb-3 mb-sm-0">
-                        <label for="descricao">Descrição do produto</label>
-                        <textarea class="form-control" id="descricao" name="descricao" rows="3" >{{$reg->descricao}}</textarea><br>
-                    </div>        
+                        <label for="categoria_id">Características</label>
+                        <input type="text" class="form-control form-control-user" id="caracteristicas" name="caracteristicas" placeholder="digite as características do produto" value="{{$reg->caracteristicas}}">
+                    </div>
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                        <label for="categoria_id">Modo de usar</label>
+                        <input type="text" class="form-control form-control-user" id="como_usar" name="como_usar" placeholder="digite como usar o produto" value="{{$reg->como_usar}}">
+                    </div>
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                        <label for="categoria_id">Observações</label>
+                        <textarea type="text" class="form-control" id="observacoes" name="observacoes" placeholder="digite as observações do produto" rows="3">{{$reg->observacoes}}</textarea>
+                    </div>
+                </div>    
+                <div class="form-group row">
                     <div class="col-sm-3" style="text-align: center">
                         @php
                             if (file_exists(public_path('/img/'. $reg->image))) {
@@ -79,7 +100,7 @@
                             </div>
                         </p>
                     </div>       
-                </div>            
+                </div>     
                 <button type="submit" class="btn btn-primary btn-icon-split"><span class="icon text-white-50"><i class="fas fa-database"></i></span><span class="text">Salvar</span></button>
               </form>
             </div>
@@ -104,5 +125,26 @@ function previewFile() {
         preview.src = "";
     }    
 }
+</script>
+<script>
+$(document).ready(function() {  
+    $('#categoria').on('change', function(e){
+        console.log(e);
+        var state_id = e.target.value;
+
+        $.get('{{ url('information') }}/create/ajax-state?state_id=' + state_id, function(data) {
+            console.log(data);
+            $('#subcategoria').empty();
+            $.each(data, function(index,subCatObj){
+                $('#subcategoria').append('<option value="'+subCatObj.id+'">'+subCatObj.nome+'</option>');
+            });
+        });
+    });
+});
+</script>
+<script>
+    $(document).ready(function() {
+        $('#valor1,#valor2,#valor3,#valor4').mask("##.###.##0,00", {reverse: true}); 
+    });       
 </script>
 @endsection
