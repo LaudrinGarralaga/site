@@ -64,7 +64,7 @@
               @endif
               <hr>
             <h4>Observações</h4>
-            @if (($prod->como_usar))
+            @if (($prod->observacoes))
               <p style="text-align: justify">{{$prod->observacoes}}</p>
             @else
               Sem observações

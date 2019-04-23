@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="/owl.carousel/assets/owl.carousel.css">
     <link rel="stylesheet" href="/owl.carousel/assets/owl.theme.default.css">
     <!-- theme stylesheet-->
-    <link rel="stylesheet" href="/css/style.pink.css" id="theme-stylesheet">
+    <link rel="stylesheet" href="/css/style.violet.css" id="theme-stylesheet">
     <!-- Custom stylesheet - for your changes-->
     <link rel="stylesheet" href="/css/custom.css">
     <!-- Favicon-->
@@ -40,8 +40,8 @@
             <div class="col-lg-6 offer mb-3 mb-lg-0"><a href="#" ></a><a href="#" class="ml-1"></a></div>
             <div class="col-lg-6 text-center text-lg-right">
               <ul class="menu list-inline mb-0">
-                <li class="list-inline-item"><a href="#" data-toggle="modal" data-target="#login-modal">Telefone (53) 3261-5590</a></li>
-                <li class="list-inline-item"><a href="register.html">E-mail - meencantacosmeticos@gmail.com</a></li>
+                <li class="list-inline-item"><a href="#" data-toggle="modal" data-target="#login-modal">Compras/contato WhatsApp: (53) 98474-4309</a></li>
+                <li class="list-inline-item"><a href="#">E-mail - meencantacosmeticos@meencantacosmeticos.com.br</a></li>
               </ul>
             </div>
           </div>
@@ -56,7 +56,7 @@
           <div id="navigation" class="collapse navbar-collapse">
             <ul class="navbar-nav mr-auto">
               @foreach($categorias as $categoria)
-            <li class="nav-item dropdown menu-large"><a href="{{route('principal.categoria', $categoria->id)}}" class="dropdown-toggle nav-link">{{$categoria->nome}}<b class="caret"></b></a>
+            <li class="nav-item dropdown menu-large"><a data-toggle="dropdown" data-hover="dropdown" data-delay="200" href="{{route('principal.categoria', $categoria->id)}}" class="dropdown-toggle nav-link">{{$categoria->nome}}<b class="caret"></b></a>
                 <ul class="dropdown-menu megamenu">
                   <li>
                     <div class="row">
@@ -171,15 +171,22 @@
       <div class="container">
         <div class="row">
           <!-- /.col-lg-3-->
-          <div class="col-lg-6 col-md-6">
+          <div class="col-lg-4 col-md-6">
             <h4 class="mb-3" style="text-align: center">Onde nos encontrar</h4>
-            <p style="text-align: center"><strong>Me Encanta Cosméticos.</strong><br>15 de Novembro<br>Número 1234<br>Jaguarão<br>Rio Grande do Sul<br><strong>Brasil</strong></p>
+            <p style="text-align: center"><strong>Me Encanta Cosméticos.</strong><br>Rua Júlio de Castilhos<br>Número 1661 – Apto. 02 – Sala 02<br>Jaguarão<br>Rio Grande do Sul<br><strong>Brasil</strong></p>
             <hr class="d-block d-md-none">
           </div>
           <!-- /.col-lg-3-->
-          <div class="col-lg-6 col-md-6">        
-            <h4 class="mb-3">Nossas redes sociais</h4>
-            <p class="social"><a href="#" class="facebook external"><i class="fa fa-facebook"></i></a><a href="#" class="twitter external"><i class="fa fa-twitter"></i></a><a href="#" class="instagram external"><i class="fa fa-instagram"></i></a><a href="#" class="gplus external"><i class="fa fa-google-plus"></i></a><a href="#" class="email external"><i class="fa fa-envelope"></i></a></p>
+          <div class="col-lg-4 col-md-6">        
+            <h4 class="mb-3" style="text-align: center">Nossas redes sociais</h4>
+            <p class="social" style="text-align: center"><a href="https://www.facebook.com/Me-Encanta-Cosm%C3%A9ticos-674945582961811/" class="facebook external"><i class="fa fa-facebook"></i></a><a href="https://www.instagram.com/meencantacosmeticos/" class="instagram external"><i class="fa fa-instagram"></i></a><a href="mailto:meencantacosmeticos@meencantacosmeticos.com.br" class="email external"><i class="fa fa-envelope"></i></a></p>
+            <hr class="d-block d-md-none">
+          </div>
+          <!-- /.col-lg-3-->
+          <div class="col-lg-4 col-md-6">     
+            <h4 style="text-align: center" class="mb-3">Formas de pagamento</h4>
+            <p style="margin-bottom: -5px">Crédito em 3x sem juros</p>   
+            <img src="/img/cartoes.jpg" alt="">
           </div>
           <!-- /.col-lg-3-->
         </div>
@@ -198,8 +205,8 @@
     <div id="copyright">
       <div class="container">
         <div class="row">
-          <div class="col-lg-7 mb-2 mb-lg-0">
-            <p class="text-center text-lg-right"><span>Copyright &copy; Láudrin R. Garralaga</span></p>
+          <div class="col-lg-12 mb-2 mb-lg-0">
+            <p class="text-center "><span>Me encanta cosméticos&reg; é uma marca registrada de Carol – Comércio, Importação e Exportação de Cosméticos Ltda. | CNPJ 04.650.066/0001-88. | Todos os direitos reservados.</span></p>
           </div>
         </div>
       </div>
