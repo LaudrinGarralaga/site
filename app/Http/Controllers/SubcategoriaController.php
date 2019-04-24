@@ -30,7 +30,7 @@ class SubcategoriaController extends Controller
             return redirect('/');
         }
 
-        $categorias = Categoria::orderBy('nome')->get();
+        $categorias = \App\Categoria::orderBy('nome')->get();
         
         return view('subcategoria_form', compact('categorias'));
     }
@@ -67,7 +67,7 @@ class SubcategoriaController extends Controller
         // Posiciona no registo a ser alterado
         $reg = Subcategoria::find($id);
 
-        $categorias = Categoria::orderBy('nome')->get();
+        $categorias = \App\Categoria::orderBy('nome')->get();
 
         return view('subcategoria_form_edit', compact('reg', 'categorias'));
     }
@@ -94,7 +94,7 @@ class SubcategoriaController extends Controller
     public function destroy($id)
     {
         // Posiciona no registo a ser alterado
-        $subcat = Categoria::find($id);
+        $subcat = Subcategoria::find($id);
         // Exibe uma mensagem se excluiu com sucesso dados, senão exibe uma de erro
         if ($subcat->delete()) {
             return redirect()->route('subcategorias.index')
