@@ -23,7 +23,7 @@ class PrincipalController extends Controller
             $produtos = Produto::orderBy('val_avista', 'desc')->paginate(16);         
             
         } else {
-            $produtos = Produto::paginate(16);
+            $produtos = Produto::orderBY('produtos.id', 'ASC')->paginate(16);
         }
         
         $categorias = Categoria::all();

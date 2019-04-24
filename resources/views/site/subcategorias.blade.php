@@ -36,10 +36,17 @@
                     <div class="card-content">
                         <div class="card-img">
                             <img class="card-img-top" src="{{asset('/img/' . $produto->image)}}" alt="imagem produto">
-                            <div class="card-body">
-                                <h5 class="card-title"><strong>{{$produto->nome}}</strong></h5>                         
-                                <p class="card-text">R${{$produto->val_avista}} À VISTA</p>
-                                <P  class="card-text-2">ou {{$produto->num_parcela}}X DE R${{$produto->val_parcelado}} SEM JUROS</P>
+                            <div class="card-body" style="height: 300px">
+                            <h5 class="card-title"><strong>{{$produto->nome}} -</strong> <span class="codigo" style="color: red">CÓD. {{$produto->codigo}}</span></h5> 
+                                @if (empty($produto->val_avista_ata))
+                                    <p class="card-text-2" style="margin-bottom: 0">R${{$produto->val_parcelado_un}} A UN. EM 3X SEM JUROS ou</p>                     
+                                    <p class="card-text" style="margin-bottom: 95px">R${{$produto->val_avista_un}} A UN. À VISTA <br> (10% de desconto)</p>    
+                                @else
+                                    <p class="card-text-2" style="margin-bottom: 0">R${{$produto->val_parcelado_ata}} O PACOTE EM 3X SEM JUROS ou</p>                     
+                                    <p class="card-text" style="margin-bottom: 5px">R${{$produto->val_avista_ata}} O PACOTE À VISTA <br> (10% de desconto)</p>    
+                                    <p class="card-text-2" style="margin-bottom: 0">R${{$produto->val_parcelado_un}} A UN. EM 3X SEM JUROS ou</p>                     
+                                    <p class="card-text" style="margin-bottom: 10px">R${{$produto->val_avista_un}} A UN. À VISTA <br> (10% de desconto)</p> 
+                                @endif   
                             <a href="{{route('produtos.show', $produto->id)}}" class="btn btn-primary">Mais detalhes</a>
                             </div>
                         </div>
@@ -47,8 +54,8 @@
                 </div>
                 @endforeach 
             </div>          
-        </div>
-        {{--{{$produtos->links()}}--}}
-        {{$produtos->appends(request()->input())->links()}}      
+            {{--{{$produtos->links()}}--}}
+        {{$produtos->appends(request()->input())->links()}} 
+        </div>       
     </section> 
 @endsection

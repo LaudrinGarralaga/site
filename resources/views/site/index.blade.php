@@ -52,8 +52,8 @@
             @endforeach 
         
     </div>
-    {{--{{$produtos->links()}}--}}
-    {{$produtos->appends(request()->input())->links()}} 
+    {{$produtos->links()}}
+    {{-- {{$produtos->appends(request()->input())->onEachSide(5)->links()}}  --}}
 </section> 
   
 @endsection
