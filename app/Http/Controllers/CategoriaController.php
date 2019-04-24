@@ -19,7 +19,7 @@ class CategoriaController extends Controller
         // Recupera todas as categorias do banco
         $categorias = Categoria::All();
 
-        return view('categoria.categoria_list', compact('categorias'));
+        return view('categoria_list', compact('categorias'));
     }
 
     
