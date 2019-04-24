@@ -13,13 +13,13 @@ use App\Subcategoria;
 |
 */
 
-Route::resource('categorias', 'admin\CategoriaController');
-Route::resource('subcategorias', 'admin\SubcategoriaController');
-Route::resource('produtos', 'admin\ProdutoController');
-Route::get('/', 'site\PrincipalController@index')->name('principal');
-Route::get('categoria/subcategoria/{id}', 'site\PrincipalController@subcategoria')->name('principal.subcategoria');
-Route::get('categoria/{id}', 'site\PrincipalController@categoria')->name('principal.categoria');
-Route::post('sitePesquisa', 'site\PrincipalController@filtro')->name('site.filtro');
+Route::resource('categorias', 'CategoriaController');
+Route::resource('subcategorias', 'SubcategoriaController');
+Route::resource('produtos', 'ProdutoController');
+Route::get('/', 'PrincipalController@index')->name('principal');
+Route::get('categoria/subcategoria/{id}', 'PrincipalController@subcategoria')->name('principal.subcategoria');
+Route::get('categoria/{id}', 'PrincipalController@categoria')->name('principal.categoria');
+Route::post('sitePesquisa', 'PrincipalController@filtro')->name('site.filtro');
 
 Route::get('/information/create/ajax-state',function()
 {

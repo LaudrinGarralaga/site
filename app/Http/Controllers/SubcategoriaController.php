@@ -1,13 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Controller;
+use App\Subcategoria;
 use App\Categoria;
 
-class CategoriaController extends Controller
+class SubcategoriaController extends Controller
 {
     
     public function index()
@@ -17,9 +18,8 @@ class CategoriaController extends Controller
             return redirect('/');
         }
         // Recupera todas as categorias do banco
-        $categorias = Categoria::All();
-
-        return view('admin.categoria.categoria_list', compact('categorias'));
+        $subcategorias = Subcategoria::All();
+        return view('admin.subcategoria.subcategoria_list', compact('subcategorias'));
     }
 
     
@@ -29,8 +29,10 @@ class CategoriaController extends Controller
         if (!Auth::check()) {
             return redirect('/');
         }
-       
-        return view('admin.categoria.categoria_form');
+
+        $categorias = Categoria::orderBy('nome')->get();
+        
+        return view('admin.subcategoria.subcategoria_form', compact('categorias'));
     }
 
     
@@ -39,10 +41,10 @@ class CategoriaController extends Controller
         // Obtém os dados do formulário
         $dados = $request->all();
         // Realiza a inclusão
-        $inc = Categoria::create($dados);
+        $inc = Subcategoria::create($dados);
         // Exibe uma mensagem de sucesso se gravou os dados no bando senão exibe uma de erro
         if ($inc) {
-            return redirect()->route('categorias.index')
+            return redirect()->route('subcategorias.index')
                 ->with('success', $request->tipo . ' Castrado(a) com sucesso!');
         } else {
             return redirect()->back->with('error', 'Falha ao cadastrar!');
@@ -63,9 +65,11 @@ class CategoriaController extends Controller
             return redirect('/');
         }
         // Posiciona no registo a ser alterado
-        $reg = Categoria::find($id);
+        $reg = Subcategoria::find($id);
 
-        return view('admin.categoria.categoria_form_edit', compact('reg'));
+        $categorias = Categoria::orderBy('nome')->get();
+
+        return view('admin.subcategoria.subcategoria_form_edit', compact('reg', 'categorias'));
     }
 
     
@@ -74,12 +78,12 @@ class CategoriaController extends Controller
         // Obtém os dados do formulario
         $dados = $request->all();
         // Posiciona no registo a ser alterado
-        $reg = Categoria::find($id);
+        $reg = Subcategoria::find($id);
         // Realiza a alteração
         $alt = $reg->update($dados);
         // Exibe uma mensagem de sucesso se alterou os dados no bando senão exibe uma de erro
         if ($alt) {
-            return redirect()->route('categorias.index')
+            return redirect()->route('subcategorias.index')
                 ->with('alter', $request->nome . ' Alterado(a) com sucesso!');
         } else {
             return redirect()->back->with('error', 'Falha ao alterar!');
@@ -90,11 +94,11 @@ class CategoriaController extends Controller
     public function destroy($id)
     {
         // Posiciona no registo a ser alterado
-        $cat = Categoria::find($id);
+        $subcat = Categoria::find($id);
         // Exibe uma mensagem se excluiu com sucesso dados, senão exibe uma de erro
-        if ($cat->delete()) {
-            return redirect()->route('categorias.index')
-                ->with('trash', $cat->nome . ' Excluído(a) com sucesso!');
+        if ($subcat->delete()) {
+            return redirect()->route('subcategorias.index')
+                ->with('trash', $subcat->nome . ' Excluído(a) com sucesso!');
         } else {
             return redirect()->back->with('error', 'Falha ao excluir!');
         }
