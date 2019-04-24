@@ -30,7 +30,7 @@ class CategoriaController extends Controller
             return redirect('/');
         }
        
-        return view('categoria.categoria_form');
+        return view('categoria_form');
     }
 
     
@@ -65,7 +65,7 @@ class CategoriaController extends Controller
         // Posiciona no registo a ser alterado
         $reg = Categoria::find($id);
 
-        return view('categoria.categoria_form_edit', compact('reg'));
+        return view('categoria_form_edit', compact('reg'));
     }
 
     
