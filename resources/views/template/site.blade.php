@@ -186,7 +186,7 @@
           <div class="col-lg-4 col-md-6">     
             <h4 style="text-align: center" class="mb-3">Formas de pagamento</h4>
             <p style="margin-bottom: -5px">Crédito em 3x sem juros</p>   
-            <img src="/img/cartoes.jpg" alt="">
+            <img src="/img/cartoes.jpg" alt="formas de pagamento" class="img-fluid">
           </div>
           <!-- /.col-lg-3-->
         </div>
