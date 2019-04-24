@@ -21,7 +21,7 @@ class ProdutoController extends Controller
         // Recupera todas as categorias do banco
         $produtos = Produto::All();
 
-        return view('admin.produto.produto_list', compact('produtos'));
+        return view('produto_list', compact('produtos'));
     }
 
     
@@ -35,7 +35,7 @@ class ProdutoController extends Controller
         $categorias = Categoria::orderBy('nome')->get();
         $subcategorias = Subcategoria::orderBy('nome')->get();
        
-        return view('admin.produto.produto_form', compact('categorias', 'subcategorias'));
+        return view('produto_form', compact('categorias', 'subcategorias'));
     }
 
     
@@ -102,7 +102,7 @@ class ProdutoController extends Controller
         // Posiciona no registo a ser alterado
         $reg = Produto::find($id);
 
-        return view('admin.produto.produto_form_edit', compact('reg','categorias', 'subcategorias'));
+        return view('produto_form_edit', compact('reg','categorias', 'subcategorias'));
     }
 
     

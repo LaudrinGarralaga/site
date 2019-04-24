@@ -19,7 +19,7 @@ class SubcategoriaController extends Controller
         }
         // Recupera todas as categorias do banco
         $subcategorias = Subcategoria::All();
-        return view('admin.subcategoria.subcategoria_list', compact('subcategorias'));
+        return view('subcategoria_list', compact('subcategorias'));
     }
 
     
@@ -32,7 +32,7 @@ class SubcategoriaController extends Controller
 
         $categorias = Categoria::orderBy('nome')->get();
         
-        return view('admin.subcategoria.subcategoria_form', compact('categorias'));
+        return view('subcategoria_form', compact('categorias'));
     }
 
     
@@ -69,7 +69,7 @@ class SubcategoriaController extends Controller
 
         $categorias = Categoria::orderBy('nome')->get();
 
-        return view('admin.subcategoria.subcategoria_form_edit', compact('reg', 'categorias'));
+        return view('subcategoria_form_edit', compact('reg', 'categorias'));
     }
 
     
