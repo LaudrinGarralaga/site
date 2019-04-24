@@ -32,8 +32,8 @@ class ProdutoController extends Controller
             return redirect('/');
         }
 
-        $categorias = Categoria::orderBy('nome')->get();
-        $subcategorias = Subcategoria::orderBy('nome')->get();
+        $categorias = App\Categoria::orderBy('nome')->get();
+        $subcategorias = App\Subcategoria::orderBy('nome')->get();
        
         return view('produto_form', compact('categorias', 'subcategorias'));
     }
