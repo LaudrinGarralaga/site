@@ -11,11 +11,11 @@ class Produto extends Model
 
     public function Categoria()
     {
-        return $this->belongsTo('App\categoria');
+        return $this->belongsTo('App\Categoria');
     }
 
     public function Subcategoria()
     {
-        return $this->belongsTo('App\subcategoria');
+        return $this->belongsTo('App\Subcategoria');
     }
 }

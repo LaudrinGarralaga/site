@@ -94,7 +94,7 @@ class SubcategoriaController extends Controller
     public function destroy($id)
     {
         // Posiciona no registo a ser alterado
-        $subcat = Categoria::find($id);
+        $subcat = Subcategoria::find($id);
         // Exibe uma mensagem se excluiu com sucesso dados, senão exibe uma de erro
         if ($subcat->delete()) {
             return redirect()->route('subcategorias.index')
