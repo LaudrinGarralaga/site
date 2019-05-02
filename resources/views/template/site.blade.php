@@ -41,7 +41,7 @@
             <div class="col-lg-6 text-center text-lg-right">
               <ul class="menu list-inline mb-0">
                 <li class="list-inline-item"><a href="#" data-toggle="modal" data-target="#login-modal">Compras/contato WhatsApp: (53) 98474-4309</a></li>
-                <li class="list-inline-item"><a href="#">E-mail - meencantacosmeticos@meencantacosmeticos.com.br</a></li>
+                <li class="list-inline-item"><a href="#">E-mail - meencanta@meencantacosmeticos.com.br</a></li>
               </ul>
             </div>
           </div>
@@ -171,22 +171,28 @@
       <div class="container">
         <div class="row">
           <!-- /.col-lg-3-->
-          <div class="col-lg-4 col-md-6">
+          <div class="col-lg-3 col-md-6">
             <h4 class="mb-3" style="text-align: center">Onde nos encontrar</h4>
-            <p style="text-align: center"><strong>Me Encanta Cosméticos.</strong><br>Rua Júlio de Castilhos<br>Número 1661 – Apto. 02 – Sala 02<br>Jaguarão<br>Rio Grande do Sul<br><strong>Brasil</strong></p>
+            <p style="text-align: center"><strong>Me Encanta!</strong><br>Rua Júlio de Castilhos<br>Número 1661 – Apto. 02 – Sala 02<br>Jaguarão<br>Rio Grande do Sul<br><strong>Brasil</strong></p>
             <hr class="d-block d-md-none">
           </div>
           <!-- /.col-lg-3-->
-          <div class="col-lg-4 col-md-6">        
+          <div class="col-lg-3 col-md-6">        
             <h4 class="mb-3" style="text-align: center">Nossas redes sociais</h4>
             <p class="social" style="text-align: center"><a href="https://www.facebook.com/Me-Encanta-Cosm%C3%A9ticos-674945582961811/" class="facebook external"><i class="fa fa-facebook"></i></a><a href="https://www.instagram.com/meencantacosmeticos/" class="instagram external"><i class="fa fa-instagram"></i></a><a href="mailto:meencantacosmeticos@meencantacosmeticos.com.br" class="email external"><i class="fa fa-envelope"></i></a></p>
             <hr class="d-block d-md-none">
           </div>
           <!-- /.col-lg-3-->
-          <div class="col-lg-4 col-md-6">     
+          <div class="col-lg-3 col-md-6">     
             <h4 style="text-align: center" class="mb-3">Formas de pagamento</h4>
             <p style="margin-bottom: -5px">Crédito em 3x sem juros</p>   
             <img src="/img/cartoes.jpg" alt="formas de pagamento" class="img-fluid">
+            <hr class="d-block d-md-none">
+          </div>
+          <!-- /.col-lg-3-->
+          <div class="col-lg-3 col-md-6">     
+            <h4 style="text-align: center" class="mb-3">Entrega</h4>
+            <p style="margin-bottom: -5px; text-align: center">Com pronta-entrega na região de Jaguarão – RS</p>   
           </div>
           <!-- /.col-lg-3-->
         </div>
