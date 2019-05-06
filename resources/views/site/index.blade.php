@@ -42,10 +42,10 @@
                                 <p class="card-text-2" style="margin-bottom: 0">R${{$produto->val_parcelado_un}} O PAR EM ATÉ 3X SEM JUROS ou</p>                     
                                 <p class="card-text" style="margin-bottom: 95px">R${{$produto->val_avista_un}} O PAR À VISTA <br> (10% de desconto)</p>
                             @else
-                            <p class="card-text-2" style="margin-bottom: 0">R${{$produto->val_parcelado_ata}} O PACOTE EM ATÉ 3X SEM JUROS ou</p>                     
-                            <p class="card-text" style="margin-bottom: 5px">R${{$produto->val_avista_ata}} O PACOTE À VISTA <br> (10% de desconto)</p>    
-                            <p class="card-text-2" style="margin-bottom: 0">R${{$produto->val_parcelado_un}} A UN. EM ATÉ 3X SEM JUROS ou</p>                     
-                            <p class="card-text" style="margin-bottom: 10px">R${{$produto->val_avista_un}} A UN. À VISTA <br> (10% de desconto)</p> 
+                                <p class="card-text-2" style="margin-bottom: 0">R${{$produto->val_parcelado_ata}} O PACOTE EM ATÉ 3X SEM JUROS ou</p>                     
+                                <p class="card-text" style="margin-bottom: 5px">R${{$produto->val_avista_ata}} O PACOTE À VISTA <br> (10% de desconto)</p>    
+                                <p class="card-text-2" style="margin-bottom: 0">R${{$produto->val_parcelado_un}} A UN. EM ATÉ 3X SEM JUROS ou</p>                     
+                                <p class="card-text" style="margin-bottom: 10px">R${{$produto->val_avista_un}} A UN. À VISTA <br> (10% de desconto)</p> 
                             @endif   
                         <a href="{{route('produtos.show', $produto->id)}}" class="btn btn-primary">Mais detalhes</a>
                         </div>
