@@ -179,7 +179,7 @@
           <!-- /.col-lg-3-->
           <div class="col-lg-3 col-md-6">        
             <h4 class="mb-3" style="text-align: center">Nossas redes sociais</h4>
-            <p class="social" style="text-align: center"><a href="https://www.facebook.com/Me-Encanta-Cosm%C3%A9ticos-674945582961811/" class="facebook external"><i class="fa fa-facebook"></i></a><a href="https://www.instagram.com/meencantacosmeticos/" class="instagram external"><i class="fa fa-instagram"></i></a><a href="mailto:meencantacosmeticos@meencantacosmeticos.com.br" class="email external"><i class="fa fa-envelope"></i></a></p>
+            <p class="social" style="text-align: center"><a href="https://www.facebook.com/Me-Encanta-Cosm%C3%A9ticos-674945582961811/" class="facebook external"><i class="fa fa-facebook"></i></a><a href="https://www.instagram.com/meencantacosmeticos/" class="instagram external"><i class="fa fa-instagram"></i></a><a href="mailto:meencanta@meencantacosmeticos.com.br" class="email external"><i class="fa fa-envelope"></i></a></p>
             <hr class="d-block d-md-none">
           </div>
           <!-- /.col-lg-3-->
