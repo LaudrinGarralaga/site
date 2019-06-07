@@ -111,4 +111,21 @@ function previewFile() {
 }
 </script>
 
+<script>
+    $(document).ready(function() {
+        $('#categoria').on('change', function(e){
+        console.log(e);
+        var state_id = e.target.value;
+
+        $.get('{{ url('information') }}/create/ajax-state?state_id=' + state_id, function(data) {
+            console.log(data);
+            $('#subcategoria').empty();
+            $.each(data, function(index,subCatObj){
+                $('#subcategoria').append('<option value="'+subCatObj.id+'">'+subCatObj.nome+'</option>');
+            });
+        });
+    });
+});
+</script>
+
 @endsection
