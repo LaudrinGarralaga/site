@@ -56,7 +56,7 @@
           <div id="navigation" class="collapse navbar-collapse">
             <ul class="navbar-nav mr-auto">
               @foreach($categorias as $categoria)
-            <li class="nav-item dropdown menu-large"><a data-toggle="dropdown" data-hover="dropdown" data-delay="200" href="{{route('principal.categoria', $categoria->id)}}" class="dropdown-toggle nav-link">{{$categoria->nome}}<b class="caret"></b></a>
+            <li class="nav-item dropdown menu-large"><a data-toggle="dropdown" data-hover="dropdown" data-delay="200" href="{{route('principal.categoria', $categoria->id)}}" class="dropdown-toggle nav-link" style="font-size: 9pt">{{$categoria->nome}}<b class="caret"></b></a>
                 <ul class="dropdown-menu megamenu">
                   <li>
                     <div class="row">
