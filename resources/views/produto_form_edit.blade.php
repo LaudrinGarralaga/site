@@ -15,13 +15,17 @@
                     {{ method_field('put') }}
                     {{ csrf_field() }}
                 <div class="form-group row">
-                    <div class="col-sm-8 mb-3 mb-sm-0">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
                         <label for="categoria_id">Nome do produto</label>
                         <input type="text" class="form-control form-control-user" id="nome" name="nome" placeholder="digite o nome do produto" value="{{$reg->nome}}">
                     </div>
-                    <div class="col-sm-4 mb-3 mb-sm-0">
+                    <div class="col-sm-3 mb-3 mb-sm-0">
                         <label for="categoria_id">Código do produto</label>
                         <input type="text" class="form-control form-control-user" id="codigo" name="codigo" placeholder="digite o código do produto" value="{{$reg->codigo}}">
+                    </div>
+                    <div class="col-sm-3 mb-3 mb-sm-0">
+                        <label for="categoria_id">Desconto</label>
+                        <input type="text" class="form-control form-control-user" id="desconto" name="desconto" placeholder="Digite o valor do desconto" value="{{$reg->desconto}}">
                     </div>
                 </div>
                 <div class="form-group row">

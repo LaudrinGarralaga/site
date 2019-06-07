@@ -48,7 +48,7 @@
         </div>      
       </div>
       <nav class="navbar navbar-expand-lg">
-        <div class="container"><a href="/" class="navbar-brand home"><img src="/img/logo.png" alt="me encanta logo" class="d-none d-md-inline-block" style="width: 250px; height: 70px"><img src="/img/logo.png" alt="me encanta logo" class="d-inline-block d-md-none" style="width: 140px; height: 50px"><span class="sr-only">Obaju - go to homepage</span></a>
+        <div class="container"><a href="/" class="navbar-brand home"><img src="/img/logo.png" alt="me encanta logo" class="d-none d-md-inline-block" style="width: 230px; height: 70px"><img src="/img/logo.png" alt="me encanta logo" class="d-inline-block d-md-none" style="width: 140px; height: 50px"><span class="sr-only">Obaju - go to homepage</span></a>
           <div class="navbar-buttons">
             <button type="button" data-toggle="collapse" data-target="#navigation" class="btn btn-outline-secondary navbar-toggler"><span class="sr-only">Toggle navigation</span><i class="fa fa-align-justify"></i></button>
             <button type="button" data-toggle="collapse" data-target="#search" class="btn btn-outline-secondary navbar-toggler"><span class="sr-only">Toggle search</span><i class="fa fa-search"></i></button>

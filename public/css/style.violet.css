@@ -65,6 +65,7 @@ h1 {
 .menu-large a.nav-link {
   padding: 7px !important;
   padding-left: 0 !important;
+  font-size: 9pt;
 }
 
 /*

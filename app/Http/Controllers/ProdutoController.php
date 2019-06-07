@@ -47,6 +47,7 @@ class ProdutoController extends Controller
         // Obtém os dados do formulário
         $produto->nome = $request->input('nome');
         $produto->codigo = $request->input('codigo');
+        $produto->desconto = $request->input('desconto');
         $produto->val_avista_un = $request->input('val_avista_un');
         $produto->val_parcelado_un = $request->input('val_parcelado_un');
         $produto->val_avista_ata = $request->input('val_avista_ata');
@@ -113,6 +114,7 @@ class ProdutoController extends Controller
 
         $reg->nome = $request->input('nome');
         $reg->codigo = $request->input('codigo');
+        $reg->desconto = $request->input('desconto');
         $reg->val_avista_un = $request->input('val_avista_un');
         $reg->val_parcelado_un = $request->input('val_parcelado_un');
         $reg->val_avista_ata = $request->input('val_avista_ata');

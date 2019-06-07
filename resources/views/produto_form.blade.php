@@ -14,13 +14,17 @@
               <form class="user" method="post" action="{{route('produtos.store')}}" enctype="multipart/form-data">
                   {{ csrf_field() }}
                 <div class="form-group row">
-                    <div class="col-sm-8 mb-3 mb-sm-0">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
                         <label for="categoria_id">Nome do produto</label>
-                        <input type="text" class="form-control form-control-user" id="nome" name="nome" placeholder="digite o nome do produto">
+                        <input type="text" class="form-control form-control-user" id="nome" name="nome" placeholder="Digite o nome do produto">
                     </div>
-                    <div class="col-sm-4 mb-3 mb-sm-0">
+                    <div class="col-sm-3 mb-3 mb-sm-0">
                         <label for="categoria_id">Código do produto</label>
-                        <input type="text" class="form-control form-control-user" id="codigo" name="codigo" placeholder="digite o código do produto">
+                        <input type="text" class="form-control form-control-user" id="codigo" name="codigo" placeholder="Digite o código do produto">
+                    </div>
+                    <div class="col-sm-3 mb-3 mb-sm-0">
+                        <label for="categoria_id">Desconto</label>
+                        <input type="text" class="form-control form-control-user" id="desconto" name="desconto" placeholder="Digite o valor do desconto">
                     </div>
                 </div>
                 <div class="form-group row">
